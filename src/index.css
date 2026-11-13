@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  ::selection {
+    @apply bg-sky-200 text-navy-950;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white text-slate-800;
+  }
+
+  input,
+  select,
+  textarea {
+    color-scheme: light;
+    @apply text-slate-900;
+  }
+
+  select {
+    @apply bg-white;
+  }
+
+  option {
+    @apply bg-white text-slate-900;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+}

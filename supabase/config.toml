@@ -1,0 +1,4 @@
+project_id = "pack-consultant-iatf"
+
+[functions.send-request]
+verify_jwt = false
